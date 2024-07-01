@@ -28,15 +28,14 @@ const IconeTextoBox = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: "432" ;
     gap: .5rem;
     font-family: Roboto;
     font-size: 16px;
     color: #fff;
 `
 const VideoEstilizado = styled.div`
-width: "432" ;
-height: "260" ;
+        width:432px ;
+        height:250px ;
     iframe{
         border: 2px solid;
         border-Radius: 13px 13px 0 0;
@@ -46,12 +45,11 @@ height: "260" ;
 const Video = ({cor, linkUrl, titulo}) => {
     return (
         <CardEstilizado style={{borderColor: cor}}>
-            <MolduraEstilizada />
             <VideoEstilizado >
                 <iframe 
                     style = {{borderColor: cor}}
-                    width = "430" 
-                    heigh = "258" 
+                    width="430"
+                    height="250"
                     src = {linkUrl}
                     title = {titulo} 
                     allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
