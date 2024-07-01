@@ -47,7 +47,7 @@ const Video = ({cor, linkUrl, titulo}) => {
         <CardEstilizado style={{borderColor: cor}}>
             <VideoEstilizado >
                 <iframe 
-                    style = {{borderColor: cor}}
+                    style={{borderColor: cor}}
                     width="430"
                     height="250"
                     src = {linkUrl}

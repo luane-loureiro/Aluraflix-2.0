@@ -1,8 +1,7 @@
 import styled from "styled-components"
 
 const DivEstilizada = styled.div`
-    display: flex;
-    flex-direction: Column;
+    display: block;
     gap: .5rem;
     color: #fff;
     width: 40vw;
@@ -36,13 +35,13 @@ const DivEstilizada = styled.div`
 `
   
 
-const CampoTexto = ({label, placeholder}) => {
+const CampoTexto = ( { Label, Placeholder } ) => {
     return(
         <DivEstilizada>
             <label>
-                {label}
+                {Label}
             </label>
-            <input placeholder={placeholder}/>
+            <input placeholder = {Placeholder}/>
         </DivEstilizada>
 
     )

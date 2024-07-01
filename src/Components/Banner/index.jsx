@@ -1,9 +1,10 @@
 import styled from "styled-components"
 
 
-const BannerEstilizado = styled.div `
+const BannerEstilizado = styled.div`
+    box-sizing:content-box;
     width: 100vw;
-    height: 832px;
+    height: 730px;
     color:#fff;
     border: 3px solid #2271D1;
     flex-grow: 1;
@@ -19,13 +20,13 @@ const BannerEstilizado = styled.div `
 `
 const BannerImg = styled.img `
     position: absolute;
-    background-image: url('../../../public/imagens/player.png');
-    background-size: 130%;
+    background-image: url('/imagens/player.png');
+    background-size: 120%;
     background-position: center;
     border-radius: 20px;
     opacity: 0.4;
-    width: 100%;
-    height: 832px;
+    width: 100vw;
+    height: 100vh;
     
 `
 const SectionEstilizada = styled.section `

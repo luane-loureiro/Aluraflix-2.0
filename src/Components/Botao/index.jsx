@@ -1,6 +1,6 @@
 import { styled } from "styled-components"
 
-const BotaoEstilizado = styled.a`
+const BotaoEstilizado = styled.button`
     width: 180px;
     height: 2rem;
     gap: 0px;
@@ -11,7 +11,7 @@ const BotaoEstilizado = styled.a`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 2rem 1rem;
     background-color: transparent;
     color: #F5F5F5;
     font-size: 20px;
@@ -24,10 +24,10 @@ const BotaoEstilizado = styled.a`
       color: #2271D1;
     }
 `
-const Botao = (texto) => {
+const Botao = ({children}) => {
   return (
     <BotaoEstilizado>
-      {texto}
+        {children}
     </BotaoEstilizado>
   )
 }

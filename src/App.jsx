@@ -10,9 +10,12 @@ const Fundo = styled.div`
   background: #191919;
   width: 100vw;
   min-height: 100vh;
+  box-sizing: content-box;
 `
 const Content = styled.div`
+  max-width: 100vw;
   min-height: 100vh;
+  box-sizing: border-box;
 `
 
 function App() {

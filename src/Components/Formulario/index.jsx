@@ -1,18 +1,22 @@
 import styled from "styled-components"
 import CampoTexto from "./CampoTexto"
 import ListaSuspensa from './ListaSuspensa'
+import Categoria from "../Categoria"
+import Botao from "../Botao"
 
 const FormBox = styled.form`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 3rem;
     gap: 60px;
 `   
 const FormColunas = styled.div`
-    display:flex;  
-    flex-direction: column; 
+    display:flex; 
+    align-items: center; 
+    flex-wrap: wrap;
     gap:60px;
-    `
+`
+
 const SubTitulo = styled.div`
 display: flex;
 flex-direction: column;
@@ -20,7 +24,7 @@ justify-content: center;
 align-content: center;
 hr{
     background-color: #262626;
-    width:100%;
+    width:90vw;
     margin: 0;
     padding:0;
     height: 3px;
@@ -41,11 +45,20 @@ h3{
 `
 
 
-const Formulario = ({ categoria, categorias, aoSubmeter, valor, titulo, imagem, link  }) => {
+const Formulario = ( ) => {
+    const categorias = [
+        'programaçao',
+        'Front-end',
+        'Data science',
+        'Devops', 
+        'Ux e Design', 
+        'Mobile',
+        'Inovação e Gestão'
+    ]
 
     return (
         <section>
-        <FormBox onSubmit={aoSubmeter}> 
+        <FormBox > 
             <SubTitulo>
                 <hr/>
                 <h3>
@@ -55,45 +68,35 @@ const Formulario = ({ categoria, categorias, aoSubmeter, valor, titulo, imagem, 
             </SubTitulo>
 
         <FormColunas>
-            <CampoTexto 
+            <CampoTexto
                 obrigatorio = {true}
                 Label = "Titulo" 
                 Placeholder = "Digite o Título do Vídeo" 
-                valor = {titulo}
-                aoAlterado = {valor => setTitulo(valor)}
             />
             <ListaSuspensa 
-                    obrigatorio = {true}
-                    Label = "Categoria" 
-                    itens = {categorias} 
-                    valor = {categoria}
-                    aoAlterado = {valor => setCategoria(valor)}
-                />
-            <CampoTexto 
-                Label = "Descrição" 
-                Placeholder = "Digite a Descrção do Vídeo"
-                valor = {descricao}
-                aoAlterado = {valor => setDescricao(valor)}
+                itens = {categorias}
+                Label = "Categoria" 
+                Placeholder = "Selecione uma Categoria" 
             />
+            <CampoTexto
+                obrigatorio = {true}
+                Label = "Imagem" 
+                Placeholder = "Digite o Endereço da imagem de Capa"
+            />
+            <CampoTexto
+                obrigatorio = {true}
+                Label = "Link" 
+                Placeholder = "Digite o Endereço do Video"
+            />
+            <CampoTexto 
+                obrigatorio = {true}
+                Label = "Descrição" 
+                Placeholder = "Digite a descrição do Video"
+            />            
         </FormColunas>
         <FormColunas>
-            <CampoTexto 
-                obrigatorio={true}
-                Label = "Imagem do Video" 
-                Placeholder = "Digite o Link da Imagem do Vídeo" 
-                valor={imagem}
-                aoAlterado={valor => setImagem(valor)}
-            />
-            <CampoTexto 
-                obrigatorio={true}
-                Label = "Link do Video" 
-                Placeholder = "Digite o Link para o Vídeo"
-                valor={link}
-                aoAlterado={valor => setLink(valor)}
-
-            />
-            <button>Limpar</button>
-            <button>Enviar</button>
+            <Botao>Limpar</Botao>
+            <Botao>Enviar</Botao>
         </FormColunas>
         </FormBox>
         </section>
