@@ -6,6 +6,7 @@ import EstilosGlobais from './Components/EstilosGlobais'
 import styled from 'styled-components'
 import RodaPe from './Components/Rodape'
 
+
 const Fundo = styled.div`
   background: #191919;
   width: 100vw;

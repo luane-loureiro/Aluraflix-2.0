@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 const DivEstilizada = styled.div`
@@ -33,15 +34,25 @@ const DivEstilizada = styled.div`
         }
     }
 `
-  
 
-const CampoTexto = ( { Label, Placeholder } ) => {
+const CampoTexto = ( { Label, Placeholder, obrigatorio, valor, aoAlterado } ) => {
+
+
+    const aoDigitado = (evento) => {
+        aoAlterado(evento.target.value)
+
+    }
+
     return(
         <DivEstilizada>
             <label>
                 {Label}
             </label>
-            <input placeholder = {Placeholder}/>
+            <input 
+                value={valor}
+                onChange={aoDigitado}
+                required = {obrigatorio} 
+                placeholder = {Placeholder}/>
         </DivEstilizada>
 
     )

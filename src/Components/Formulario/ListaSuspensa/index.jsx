@@ -38,11 +38,16 @@ const SelectEstilizada = styled.select`
         }
 `
 
-const ListaSuspensa = ({ Label, itens, Placeholder }) => {
+const ListaSuspensa = ({ Label, itens, obrigatorio, valor, aoAlterado }) => {
     return (
     <div>
         <LabelEstilizada>{Label}</LabelEstilizada>
-        <SelectEstilizada placeholder = {Placeholder}> 
+        <SelectEstilizada 
+            required = {obrigatorio}
+            value = {valor}
+            onChange ={evento => aoAlterado(evento.target.value)}
+            > 
+
             {itens.map(item => {
                 return(
                     <option key = {item}>

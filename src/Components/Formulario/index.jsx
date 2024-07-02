@@ -1,8 +1,9 @@
 import styled from "styled-components"
 import CampoTexto from "./CampoTexto"
 import ListaSuspensa from './ListaSuspensa'
-import Categoria from "../Categoria"
 import Botao from "../Botao"
+
+import { useState } from "react"
 
 const FormBox = styled.form`
     display: flex;
@@ -45,7 +46,7 @@ h3{
 `
 
 
-const Formulario = ( ) => {
+const Formulario = ( {aoVideoCadastrado} ) => {
     const categorias = [
         'programaçao',
         'Front-end',
@@ -56,9 +57,25 @@ const Formulario = ( ) => {
         'Inovação e Gestão'
     ]
 
+    const [titulo, setTitulo] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [link, setLink] = useState('')
+    const [descricao, setDescricao] = useState('')
+    const [categoria, setCategoria] = useState('')
+
+    const aoSalvar = (evento) => {
+        evento.preventDefault()
+        aoVideoCadastrado({
+            titulo, 
+            categoria, 
+            imagem,
+            link,
+            descricao
+        })
+    }
     return (
         <section>
-        <FormBox > 
+        <FormBox onSubmit = {aoSalvar}> 
             <SubTitulo>
                 <hr/>
                 <h3>
@@ -72,26 +89,36 @@ const Formulario = ( ) => {
                 obrigatorio = {true}
                 Label = "Titulo" 
                 Placeholder = "Digite o Título do Vídeo" 
+                valor = {titulo}
+                aoAlterado={valor => setTitulo(valor)}
             />
             <ListaSuspensa 
+                obrigatorio={true}
                 itens = {categorias}
                 Label = "Categoria" 
-                Placeholder = "Selecione uma Categoria" 
+                valor = {categoria}
+                aoAlterado = {valor => setCategoria(valor)}
             />
             <CampoTexto
                 obrigatorio = {true}
                 Label = "Imagem" 
                 Placeholder = "Digite o Endereço da imagem de Capa"
+                valor = {imagem}
+                aoAlterado={valor => setImagem(valor)}
             />
             <CampoTexto
                 obrigatorio = {true}
                 Label = "Link" 
                 Placeholder = "Digite o Endereço do Video"
+                valor = {link}
+                aoAlterado={valor => setLink(valor)}
             />
             <CampoTexto 
                 obrigatorio = {true}
                 Label = "Descrição" 
                 Placeholder = "Digite a descrição do Video"
+                valor = {descricao}
+                aoAlterado={valor => setDescricao(valor)}
             />            
         </FormColunas>
         <FormColunas>

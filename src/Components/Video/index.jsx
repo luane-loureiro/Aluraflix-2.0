@@ -7,6 +7,11 @@ const CardEstilizado = styled.div `
     text-transform: uppercase;
     border:3px solid;
     border-radius: 15px;
+    &:hover{
+        box-shadow: 0px 0px 12px 10px;
+        border: 5px solid;
+
+    }
 `
 
 const DetalhesEstilizado = styled.span`
@@ -17,13 +22,6 @@ const DetalhesEstilizado = styled.span`
     position: 0;
 
 `
-const MolduraEstilizada = styled.div`
-    border-radius: 15px 15px 0 0;
-    width:436px ;
-    height:260px ;
-    position: absolute;
-`
-
 const IconeTextoBox = styled.div`
     display: flex;
     flex-direction: row;
@@ -44,7 +42,7 @@ const VideoEstilizado = styled.div`
 
 const Video = ({cor, linkUrl, titulo}) => {
     return (
-        <CardEstilizado style={{borderColor: cor}}>
+        <CardEstilizado style={{borderColor: cor, boxShadowColor: cor}}>
             <VideoEstilizado >
                 <iframe 
                     style={{borderColor: cor}}

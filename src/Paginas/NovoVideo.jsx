@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Formulario from "../Components/Formulario"
+import { useState } from "react"
 
 const DivPrincipal = styled.div`
     display: flex;
@@ -32,6 +33,13 @@ const TituloFormulario = styled.span`
 
 
 const NovoVideo = () =>{
+    const [videos, setVideos] = useState([])
+    
+    let aoNovoVideoCadastrado = (video) => {
+        console.log (video)
+        setVideos([...videos, video])
+    }
+
     return (
         <DivPrincipal>
 
@@ -39,7 +47,7 @@ const NovoVideo = () =>{
                 <h1>Novo Video</h1>
                 <h2>Complete o formulário para criar um novo card de vídeo.</h2>
             </TituloFormulario>
-            <Formulario/>
+            <Formulario aoVideoCadastrado={video => aoNovoVideoCadastrado(video)}/>
 
         </DivPrincipal>
     )
