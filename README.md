@@ -21,3 +21,8 @@ O objetivo do Aluraflix é ser um Netflix da Alura. Nele você terá sugestões 
 
 ## 🚩 Deploy do projeto 
 [https://detona-ralph-v01.vercel.app/](https://aluraflix-2-0-l5j9s1vvy-luane-loureiros-projects.vercel.app/)
+
+## Recadinho para Avaliadores T6 one
+agradeço a oportunidade de ter participado do programa, mas não conseguir terminar meu projeto hj, pq passei o dia todo com minha filha no medico, ela passou mal na escola, e tive q ir busca-la.
+faltou pouca coisa, alguns ajustes e funcionalidades, eu vou concluir o projeto, so não consegui concluir hj, que era o praso final =/
+espero que o que eu consegui fazer sirva como avaliação final.
