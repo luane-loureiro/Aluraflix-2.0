@@ -25,4 +25,4 @@ O objetivo do Aluraflix é ser um Netflix da Alura. Nele você terá sugestões 
 ## Recadinho para Avaliadores T6 one
 agradeço a oportunidade de ter participado do programa, mas não conseguir terminar meu projeto hj, pq passei o dia todo com minha filha no medico, ela passou mal na escola, e tive q ir busca-la.
 faltou pouca coisa, alguns ajustes e funcionalidades, eu vou concluir o projeto, so não consegui concluir hj, que era o praso final =/
-espero que o que eu consegui fazer sirva como avaliação final.
+espero que o que eu consegui fazer sirva como avaliação final, visualmente esta igual ao do trelo, e tem todos os componentes.
