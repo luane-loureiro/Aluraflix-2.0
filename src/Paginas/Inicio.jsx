@@ -7,7 +7,7 @@ const Inicio = () =>{
     const CategoriaDate = [
         {
           id: "01",
-          nome: 'Programação',
+          nome: 'Back-End',
           cor:  '#00C86F'
         },
         {
@@ -66,9 +66,53 @@ const Inicio = () =>{
           descricao: '',
           link : 'https://www.youtube.com/embed/oGy1qDSfjXo?si=yFB4bHnkHnfFbjuM',
           categoria: 'Front-End'
-        }
-      ]
+        },
+        {
+          id:"0004",
+          favorito: false,
+          titulo: 'O que faz uma desenvolvedora Back-end?',
+          descricao: '',
+          link : 'https://www.youtube.com/embed/fiPfvylj6rk?si=d0ZfhH12y07ngyJB',
+          categoria: 'Back-End'
+        },         
+        {
+          id:"0005",
+          favorito: false,
+          titulo: 'Quais as profissões em Ciência de Dados?',
+          descricao: '',
+          link : 'https://www.youtube.com/embed/5CHLH9LU1Uc?si=mONNXa5gHavRoSk3',
+          categoria: 'Data Science'
+        },
+        {
+          id:"0006",
+          favorito: false,
+          titulo: 'O que é Data Science?',
+          descricao: '',
+          link : 'https://www.youtube.com/embed/5b9Z8toVaAU?si=E_NBTx8vEMX7Ieav',
+          categoria: 'Data Science'
+        },
+        {
+          id:"0007",
+          favorito: false,
+          titulo: 'Desmistificando mobile- Linguagens e Frameworks',
+          descricao: '',
+          link : 'https://www.youtube.com/embed/fmu1LQvZhms?si=liPXUkZZOcqjwk8H',
+          categoria: 'Mobile'
+        }, 
+        {
+          id:"0008",
+          favorito: false,
+          titulo: 'Guia de Carreira: DevOps',
+          descricao: '',
+          link : 'https://www.youtube.com/embed/VfC5QyP4n9s?si=di1G6Oex6sRbl9v_',
+          categoria: 'Devops'
+        }, 
 
+        
+        
+
+      ]
+"" 
     return (
         <div>
         <Banner
